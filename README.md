@@ -14,6 +14,7 @@ kubectl create configmap ginkgo-options --from-file=options.yaml=configure-pod-c
 
 5. TODO: load options.yaml via configmap
 
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -33,6 +34,7 @@ spec:
         # to add to the container
         name: ginkgo-options
   restartPolicy: Never
-  
-  
+```  
+(from kube examples)
+
   The listing should show /etc/config/options.yaml 
